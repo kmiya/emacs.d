@@ -48,16 +48,16 @@
 (auto-install-compatibility-setup)
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 (setq auto-install-use-wget t)
-(require 'cl)
-(defun my-erase-auto-install-buffer ()
-  (interactive)
-  (dolist (buf (buffer-list))
-    (if (eq (string-match "^\\*auto-install " (buffer-name buf)) 0)
-        (progn
-	   ;; (print "ok")
-	   (kill-buffer buf)))))
-;;実行する
-(add-hook 'find-file-hook 'my-erase-auto-install-buffer)
+
+;; (defun my-erase-auto-install-buffer ()
+;;   (interactive)
+;;   (dolist (buf (buffer-list))
+;;     (if (eq (string-match "^\\*auto-install " (buffer-name buf)) 0)
+;;         (progn
+;; 	   ;; (print "ok")
+;; 	   (kill-buffer buf)))))
+;; ;;実行する
+;; (add-hook 'find-file-hook 'my-erase-auto-install-buffer)
 
 ;;====================================
 ;; auto-async-byte-compile
@@ -153,6 +153,8 @@
 (setq kept-old-versions 5)   ; 古いものをいくつ残すか
 (setq delete-old-versions t) ; 確認せずに古いものを消す。
 (setq vc-make-backup-files t) ; バージョン管理下のファイルもバックアップを作る。
+;; 終了時にオートセーブファイルを消す
+(setq delete-auto-save-files t)
 
 ;;ミニバッファ履歴リストの最大長：tなら無限
 (setq history-length 1000)

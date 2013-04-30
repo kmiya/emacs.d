@@ -1,3 +1,15 @@
+;;起動時のフレームサイズを設定する
+(setq initial-frame-alist
+      (append (list
+               '(width . 110)
+               '(height . 65)
+               )
+              initial-frame-alist))
+(setq default-frame-alist initial-frame-alist)
+
+;;; theme
+(load-theme 'misterioso t)
+
 ;; viewer.el
 (require 'viewer)
 ;; 書き込めないファイルは常にview-mode
@@ -52,7 +64,7 @@
 ;; font
 (if window-system
     (progn
-      (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))
+      (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-9:weight=bold"))
       (set-fontset-font "fontset-default"
 			'japanese-jisx0208
 			'("TakaoEx明朝" . "iso10646-1"))
@@ -61,7 +73,7 @@
 			'("TakaoEx明朝" . "iso10646-1"))
       (setq face-font-rescale-alist
 	    '(
-	      (".*TakaoEx明朝.*" . 1.1)
+	      (".*TakaoEx明朝.*" . 1.0)
 	      ))
       )
   )

@@ -3,6 +3,8 @@
 (add-hook 'lisp-interaction-mode-hook 'enable-paredit-mode)
 (add-hook 'lisp-mode-hook 'enable-paredit-mode)
 (add-hook 'ielm-mode-hook 'enable-paredit-mode)
+(eval-after-load "paredit"
+  #'(define-key paredit-mode-map (kbd "C-j") 'eval-last-sexp))
 
 (require 'eldoc-extension)
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
