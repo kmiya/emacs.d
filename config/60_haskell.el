@@ -15,7 +15,7 @@
 
 ;; key-comboの設定用関数
 (require 'key-combo)
-(key-combo-load-default)
+;; (key-combo-load-default)
 (defun my-haskell-key-combo ()
   (key-combo-define-local (kbd "-") '("-" " -> " "--"))
   ;; (key-combo-define-local (kbd "<=") '("<="))
