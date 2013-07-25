@@ -1,0 +1,14 @@
+*~
+*.elc
+.recentf
+.session
+ac-comphist.dat
+auto-install/
+auto-save-list/
+elpa/
+eshell/
+ghc-mod/
+history
+plugins/
+recentf
+var/

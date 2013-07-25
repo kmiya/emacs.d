@@ -28,3 +28,6 @@
 (require 'goto-chg)
 (define-key global-map (kbd "<f8>") 'goto-last-change)
 (define-key global-map (kbd "S-<f8>") 'goto-last-change-reverse)
+
+;;; try-expand-abbrev を dabbrev-complemention に
+(global-set-key "\M-/" 'dabbrev-completion)

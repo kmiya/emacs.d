@@ -42,7 +42,7 @@
 (require 'recentf-ext)
 (recentf-mode 1)
 (recentf-save-list)
-(global-set-key (kbd "C-x f") 'recentf-open-files)
+;; (global-set-key (kbd "C-x f") 'recentf-open-files)
 
 ;; bookmark
 (setq bookmark-save-flag 1)

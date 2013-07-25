@@ -2,13 +2,17 @@
 (setq initial-frame-alist
       (append (list
                '(width . 110)
-               '(height . 65)
+               '(height . 60)
                )
               initial-frame-alist))
 (setq default-frame-alist initial-frame-alist)
 
 ;;; theme
-(load-theme 'misterioso t)
+;; (load-theme 'misterioso t)
+
+;;; 折り返し記号の色
+(set-face-background 'fringe "gray99") ;;背景色薄いグレーに
+(set-face-foreground 'fringe "gray95") ;;表示色薄いグレーに
 
 ;; viewer.el
 (require 'viewer)
@@ -64,7 +68,8 @@
 ;; font
 (if window-system
     (progn
-      (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-9:weight=bold"))
+      ;; (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10.5:weight=bold"))
+      (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10.5"))
       (set-fontset-font "fontset-default"
 			'japanese-jisx0208
 			'("TakaoEx明朝" . "iso10646-1"))

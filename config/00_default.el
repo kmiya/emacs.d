@@ -72,7 +72,7 @@
 ;; Webページの閲覧に Firefox を使う
 (setq browse-url-browser-function 'browse-url-firefox)
 ;;現在の行に色をつける
-(global-hl-line-mode 1)
+;; (global-hl-line-mode 1)
 ;;履歴を保存する
 (savehist-mode 1)
 ;;ファイル内のカーソル位置を記憶する
@@ -159,15 +159,15 @@
 ;;ミニバッファ履歴リストの最大長：tなら無限
 (setq history-length 1000)
 ;; kill-ringやミニバッファで過去に開いたファイルなどの履歴を保存する
-(require 'session)
-(when (require 'session nil t)
-  (setq session-initialize '(de-saveplace session keys menus places)
-        session-globals-include '((kill-ring 50)
-                                  (session-file-alist 500 t)
-                                  (file-name-history 10000)))
-  (add-hook 'after-init-hook 'session-initialize)
-  ;; 前回閉じたときの位置にカーソルを復帰
-  (setq session-undo-check -1))
+;; (require 'session)
+;; (when (require 'session nil t)
+;;   (setq session-initialize '(de-saveplace session keys menus places)
+;;         session-globals-include '((kill-ring 50)
+;;                                   (session-file-alist 500 t)
+;;                                   (file-name-history 10000)))
+;;   (add-hook 'after-init-hook 'session-initialize)
+;;   ;; 前回閉じたときの位置にカーソルを復帰
+;;   (setq session-undo-check -1))
 ;; minibuf-isearch
 ;; minibufでisearchを使えるようにする
 (require 'minibuf-isearch nil t)
