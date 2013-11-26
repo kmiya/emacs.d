@@ -10,7 +10,7 @@
     (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
         (normal-top-level-add-subdirs-to-load-path))))))
 ;; 引数のディレクトリとそのサブディレクトリをload-pathに追加
-(add-to-load-path "auto-install" "elpa" "config" "ghc-mod")
+(add-to-load-path "auto-install" "elpa" "config" "ghc-mod" "plugins")
 
 ;; init-loader
 (require 'init-loader)
@@ -31,3 +31,15 @@
 
 ;;; try-expand-abbrev を dabbrev-complemention に
 (global-set-key "\M-/" 'dabbrev-completion)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("a2c537c981b4419aa3decac8e565868217fc2995b74e1685c5ff8c6d77b198d6" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

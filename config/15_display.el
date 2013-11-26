@@ -9,6 +9,7 @@
 
 ;;; theme
 ;; (load-theme 'misterioso t)
+;; (load-theme 'zenburn t)
 
 ;;; 折り返し記号の色
 (set-face-background 'fringe "gray99") ;;背景色薄いグレーに
@@ -68,8 +69,8 @@
 ;; font
 (if window-system
     (progn
-      ;; (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10.5:weight=bold"))
-      (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10.5"))
+      (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10.5:weight=bold"))
+      ;; (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10.5"))
       (set-fontset-font "fontset-default"
 			'japanese-jisx0208
 			'("TakaoEx明朝" . "iso10646-1"))
